@@ -29,8 +29,11 @@ public class HomeWork_3 {
         password.sendKeys("Remember15@");
         //wd.findElement(By.cssSelector("[name$='registration']")).click();
         wd.findElement(By.cssSelector("[type$='submit']")).click();
-       // wd.findElement(By.cssSelector("button [contains(text(),'Sign Out' "));
-       // signOut.click();
+        WebElement bar = wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
+
+
+
+
 
     }
 

@@ -16,7 +16,7 @@ public class HomeWork_3 {
     }
 
     @Test
-    public void loginPhonebook() {
+    public void loginPhonebook() throws InterruptedException {
         wd.navigate().to("https://telranedu.web.app/");
         wd.findElement(By.cssSelector("[href = '/login'")).click();
         WebElement email = wd.findElement(By.cssSelector("[placeholder='Email']"));
@@ -29,8 +29,10 @@ public class HomeWork_3 {
         password.sendKeys("Remember15@");
         //wd.findElement(By.cssSelector("[name$='registration']")).click();
         wd.findElement(By.cssSelector("[type$='submit']")).click();
-        WebElement bar = wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
-
+        //WebElement bar = wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
+        Thread.sleep(2000);
+        WebElement bar1 = wd.findElement(By.cssSelector(".navbar-logged_nav__2Hx7M"));
+        wd.findElement(By.cssSelector("body button")).click();
 
 
 
